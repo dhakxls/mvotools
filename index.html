@@ -4,7 +4,56 @@
   <meta charset="UTF-8">
   <title>mvotools — Lab Apps Hub</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- (styles unchanged) -->
+  <style>
+    :root {
+      --bg: #0f172a;
+      --panel: #111827;
+      --card: #1f2937;
+      --accent: #38bdf8;
+      --text: #e5e7eb;
+      --muted: #9ca3af;
+      --shadow: 0 20px 40px rgba(0,0,0,0.35);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; font-family: "Inter", system-ui, -apple-system, sans-serif;
+      background: radial-gradient(circle at 20% 20%, #0b1224, #0f172a 45%), #0f172a;
+      color: var(--text); line-height: 1.5; padding: 32px 16px;
+    }
+    .shell { max-width: 1080px; margin: 0 auto; }
+    header {
+      background: linear-gradient(135deg, rgba(56,189,248,0.08), rgba(59,130,246,0.08));
+      border: 1px solid rgba(255,255,255,0.05);
+      border-radius: 16px; padding: 24px; box-shadow: var(--shadow);
+    }
+    h1 { margin: 0 0 8px; font-size: 32px; letter-spacing: -0.02em; }
+    p.lead { margin: 0; color: var(--muted); }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 16px; margin-top: 20px;
+    }
+    .card {
+      background: var(--card); border: 1px solid rgba(255,255,255,0.05);
+      border-radius: 14px; padding: 18px; box-shadow: var(--shadow);
+      display: flex; flex-direction: column; gap: 10px;
+    }
+    .tag { display: inline-block; padding: 4px 10px; border-radius: 999px;
+      background: rgba(56,189,248,0.14); color: var(--accent); font-size: 12px; letter-spacing: 0.03em; text-transform: uppercase;
+    }
+    .title { font-size: 18px; margin: 0; }
+    .desc { margin: 0; color: var(--muted); }
+    .actions { margin-top: auto; display: flex; gap: 10px; flex-wrap: wrap; }
+    a.btn {
+      text-decoration: none; color: #0b1224; background: var(--accent);
+      padding: 10px 14px; border-radius: 10px; font-weight: 600; box-shadow: 0 10px 24px rgba(56,189,248,0.35);
+    }
+    a.ghost {
+      text-decoration: none; color: var(--text); border: 1px solid rgba(255,255,255,0.12);
+      padding: 9px 13px; border-radius: 10px; font-weight: 600;
+    }
+    footer { margin-top: 28px; color: var(--muted); text-align: center; font-size: 14px; }
+  </style>
 </head>
 <body>
   <div class="shell">
@@ -19,17 +68,16 @@
         <h3 class="title">PhotoPhenosizer (Pombe)</h3>
         <p class="desc">Cellpose-based fission yeast segmentation with overlays, CSVs, and NT vs T stats.</p>
         <div class="actions">
-          <a class="btn" href="https://homelab.taild08007.ts.net/" target="_blank" rel="noreferrer">Open app</a>
-          <a class="ghost" href="#" target="_blank" rel="noreferrer">Source</a>
+          <a class="btn" href="https://homelab.taild08007.ts.net/pp/" target="_blank" rel="noreferrer">Open app</a>
         </div>
       </div>
 
       <div class="card">
         <span class="tag">Genomics</span>
         <h3 class="title">OncoVariantMiner</h3>
-        <p class="desc">Variant mining and annotation workflows. (Link when deployed.)</p>
+        <p class="desc">Variant mining and annotation workflows.</p>
         <div class="actions">
-          <a class="ghost" href="#" onclick="return false;">Coming soon</a>
+          <a class="btn" href="https://homelab.taild08007.ts.net/ovm/" target="_blank" rel="noreferrer">Open app</a>
         </div>
       </div>
     </section>
